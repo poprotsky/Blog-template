@@ -1,7 +1,13 @@
 .lead {
 	font-size: $default-lead-font-size;
+    font-weight: $default-lead-font-weight;
+    line-height: $default-line-height;
 }
 
-.section {
-	padding: 30px 0;
+.gray-bg {
+    background-color: $gray-light;
+}
+
+.page-content {
+	padding: 100px 0;
 }

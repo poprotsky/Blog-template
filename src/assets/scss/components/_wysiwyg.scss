@@ -1,13 +1,49 @@
 .wysiwyg {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $default-font-family;
+		font-weight: 600;
+	}
+
+	a:not(.btn, .magnific) {
+		position: relative;
+		font-style: italic;
+		@include hover() {
+			opacity: .5;
+			&::before {
+				opacity: 0;
+				bottom: -5px;
+				transform: scale(1.1);
+			}
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -2px;
+			left:0;
+			right:0;
+			height: 1px;
+			background-color: $default-font-color;
+			@include transition();
+		}
+	}
+
 	img {
 	    height: auto !important;
 	    max-width: 100% !important;
 	}
-	
 	.img {
-		margin: $default-margin;
+		margin: 40px 0;
 		text-align: center;
-
+		@include transition();
+		@include hover() {
+			transform: scale(1.05);
+			box-shadow: $default-box-shadow;
+		}
 		img {
 			@include max-screen($xs-min) {
 				width: auto !important;
@@ -17,7 +53,7 @@
     	&--left, 
 		&--right {
 			max-width: 45%;
-			
+			margin: 40px;
 			img {
 				display: block;
 			    width: 100%;
@@ -38,12 +74,12 @@
 
 		&--left {
 			float: left;
-			margin: 0 30px 15px 0;
+			margin-left: 0;
 		}
 
 		&--right {
 			float: right;
-			margin: 0 0 15px 30px;
+			margin-right: 0;
 		}
     }
 }

@@ -1,5 +1,8 @@
-.container-wide {
-	width: 1720px;
+.container {
+    &--thin {
+        max-width: 750px;
+        margin: 0 auto;
+    }
 }
 
 //

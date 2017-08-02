@@ -45,6 +45,7 @@ h6,
 .h4,
 .h5,
 .h6 {
+    font-family: $heading-font-family;
     font-weight: $heading-weight;
     color: $heading-color;
     line-height: $heading-line-height;
@@ -114,7 +115,7 @@ b {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
-    font-weight: $default-font-weight-bold;
+    font-weight: 600;
 }
 
 em,
@@ -173,6 +174,7 @@ ul.list-styled,
         margin: $list-li-margin;
         padding: $list-li-padding;
         position: relative;
+        font-size: 16px;
         &::before {
             content: $list-li-icon-content;
             font-family: $list-li-font-family;
@@ -180,7 +182,11 @@ ul.list-styled,
             color: $list-li-icon-color;
             position: absolute;
             top: $list-li-icon-top;
+            bottom: 0;
+            right: $list-li-icon-right;
             left: $list-li-icon-left;
+            width: 2px;
+            background-color: $default-font-color;
         }
     }
     ol, 
@@ -212,8 +218,10 @@ abbr[title] {
 
 mark,
 .mark {
-    padding: 2px 5px;
-    background-color: #fcf8e3;
+    padding: 4px 8px;
+    font-size: 16px;
+    background-color: $default-font-color;
+    color: #fff;
 }
 
 abbr[title],
@@ -336,14 +344,14 @@ table th {
 }
 
 blockquote {
-    color: #5c5c5c;
-    background-color: #f6f6f6;
-    font-size: $default-font-size;
+    color: $default-font-color;
+    background-color: transparent;
+    font-family: $alt-font-family;
+    font-size: 20px;
     font-style: italic;
     font-weight: $default-font-weight;
     line-height: $default-line-height;
-    margin: $default-margin;
-    padding: 20px 25px;
+    padding: 50px;
     position: relative;
 }
 
