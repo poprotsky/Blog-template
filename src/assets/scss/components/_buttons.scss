@@ -13,110 +13,57 @@ $btn-group--btn-margin: 5px;
 //
 $btn-margin: $clear-margin;
 
-$btn-padding-top: 15px;
+$btn-padding-top: 18px;
 $btn-padding-right: 30px;
-$btn-padding-bottom: 15px;
+$btn-padding-bottom: 18px;
 $btn-padding-left: 30px;
 
 $btn-text-align: center;
-$btn-text-transform: initial;
-$btn-line-height: 1.2;
-$btn-letter-spacing: initial;
+$btn-text-transform: uppercase;
+$btn-line-height: 1;
+$btn-letter-spacing: 1px;
 
-$btn-font-size: $default-font-size;
+$btn-font-size: 12px;
 $btn-font-family: $default-font-family;
-$btn-font-weight: $default-font-weight;
+$btn-font-weight: 600;
 
-$btn-color: #fff;
-$btn-color--hover: #fff;
+$btn-color: $default-font-color;
+$btn-color--hover: $default-font-color;
 
-$btn-bg-color: $key-color-2;
-$btn-bg-color--hover: $key-color-1;
+$btn-bg-color: #fff;
+$btn-bg-color--hover: $gray-light;
 
 $btn-border: 2px solid transparent;
 $btn-border--hover: $btn-border;
-$btn-border-radius: 0;
+$btn-border-radius: 50px;
 
 
 //
 // .btn--primary
 //
-$btn-primary--padding-top: $btn-padding-top;
-$btn-primary--padding-right: $btn-padding-right;
-$btn-primary--padding-bottom: $btn-padding-bottom;
-$btn-primary--padding-left: $btn-padding-left;
+$btn-primary--padding-top: 0;
+$btn-primary--padding-right: 0;
+$btn-primary--padding-bottom: 0;
+$btn-primary--padding-left: 0;
 
 $btn-primary--text-align: $btn-text-align;
 $btn-primary--text-transform: uppercase;
 $btn-primary--line-height: $btn-line-height;
-$btn-primary--letter-spacing: 1.5px;
+$btn-primary--letter-spacing: $btn-letter-spacing;
 
 $btn-primary--font-size: $btn-font-size;
 $btn-primary--font-family: $btn-font-family;
-$btn-primary--font-weight: 300;
+$btn-primary--font-weight: $btn-font-weight;
 
 $btn-primary--color: $btn-color;
-$btn-primary--color--hover: $key-color-1;
+$btn-primary--color--hover: rgba($btn-color, .5);
 
-$btn-primary--bg-color: $key-color-1;
+$btn-primary--bg-color: transparent;
 $btn-primary--bg-color--hover: transparent;
 
 $btn-primary--border: 2px solid transparent;
-$btn-primary--border--hover: 2px solid $key-color-1;
-$btn-primary--border-radius: 5px;
-
-
-//
-// .btn--stroke
-//
-$btn-stroke--padding-top: $btn-padding-top;
-$btn-stroke--padding-right: $btn-padding-right;
-$btn-stroke--padding-bottom: $btn-padding-bottom;
-$btn-stroke--padding-left: $btn-padding-left;
-
-$btn-stroke--text-align: $btn-text-align;
-$btn-stroke--text-transform: initial;
-$btn-stroke--line-height: $btn-line-height;
-$btn-stroke--letter-spacing: $btn-letter-spacing;
-
-$btn-stroke--font-size: $btn-font-size;
-$btn-stroke--font-family: $btn-font-family;
-$btn-stroke--font-weight: $btn-font-weight;
-
-$btn-stroke--color: $key-color-1;
-$btn-stroke--color--hover: $btn-color;
-
-$btn-stroke--bg-color: transparent;
-$btn-stroke--bg-color--hover: $key-color-1;
-
-$btn-stroke--border: 2px solid $key-color-1;
-$btn-stroke--border--hover: 2px solid transparent;
-$btn-stroke--border-radius: 50px;
-
-//
-// .btn--small
-//
-$btn-small--padding-divider: 1.5;
-$btn-small--font-size: $default-font-size - 2px;
-
-	//// don't edit | this code generate small size btn
-	$btn-small--padding-top: $btn-padding-top / $btn-small--padding-divider;
-	$btn-small--padding-right: $btn-padding-right / $btn-small--padding-divider;
-	$btn-small--padding-bottom: $btn-padding-bottom / $btn-small--padding-divider;
-	$btn-small--padding-left: $btn-padding-left / $btn-small--padding-divider;
-
-
-//
-// .btn--large
-//
-$btn-large--padding-divider: 1.5;
-$btn-large--font-size: $default-font-size + 2px;
-
-	//// don't edit | this code generate large size btn
-	$btn-large--padding-top: $btn-padding-top * $btn-large--padding-divider;
-	$btn-large--padding-right: $btn-padding-right * $btn-large--padding-divider;
-	$btn-large--padding-bottom: $btn-padding-bottom * $btn-large--padding-divider;
-	$btn-large--padding-left: $btn-padding-left * $btn-large--padding-divider;
+$btn-primary--border--hover: $btn-primary--border;
+$btn-primary--border-radius: 0;
 
 
 // 
@@ -137,7 +84,7 @@ $btn-large--font-size: $default-font-size + 2px;
 .btn {
 	@extend .flex;
 	cursor: pointer;
-
+    box-shadow: $default-box-shadow-half;
 	padding: {
 		top: $btn-padding-top;
 		right: $btn-padding-right;
@@ -169,6 +116,15 @@ $btn-large--font-size: $default-font-size + 2px;
 		text-decoration: none;
 		background-color: $btn-bg-color--hover;
 		color: $btn-color--hover;
+        box-shadow: $default-box-shadow;
+    }
+    .ico,
+    .ico-default {
+        font-size: 12px;
+        color: $default-font-color;
+        + span {
+            padding-left: 10px;
+        }
     }
 
     // @include max-screen($xxs-max) {
@@ -177,13 +133,15 @@ $btn-large--font-size: $default-font-size + 2px;
     // }
 	// mods
     &--primary {
+        @extend .flex, .flex--center-y, .flex--nowrap;
+        position: relative;
     	padding: {
 			top: $btn-primary--padding-top;
 			right: $btn-primary--padding-right;
 			bottom: $btn-primary--padding-bottom;
 			left: $btn-primary--padding-left;
 		}
-
+        box-shadow: none;
 		text-align: $btn-primary--text-align;
 		text-decoration: none;
 		text-transform: $btn-primary--text-transform;
@@ -203,55 +161,31 @@ $btn-large--font-size: $default-font-size + 2px;
     		color: $btn-primary--color--hover;
     		background-color: $btn-primary--bg-color--hover;
     		border: $btn-primary--border--hover;
+            box-shadow: none;
+            .ico {
+                color: rgba($btn-color, .5);
+                &[class*="left"] {
+                    transform: translateX(-5px);
+                }
+                &[class*="right"] {
+                    transform: translateX(5px);
+                }
+            }
     	}
-    }
-    &--stroke {
-    	padding: {
-			top: $btn-stroke--padding-top;
-			right: $btn-stroke--padding-right;
-			bottom: $btn-stroke--padding-bottom;
-			left: $btn-stroke--padding-left;
-		}
-
-		text-align: $btn-stroke--text-align;
-		text-decoration: none;
-		text-transform: $btn-stroke--text-transform;
-		line-height: $btn-stroke--line-height;
-		letter-spacing: $btn-stroke--letter-spacing;
-
-		font-size: $btn-stroke--font-size;
-		font-family: $btn-stroke--font-family;
-		font-weight: $btn-stroke--font-weight;
-
-    	color: $btn-stroke--color;
-    	background-color: $btn-stroke--bg-color;
-    	border: $btn-stroke--border;
-		border-radius: $btn-stroke--border-radius;
-
-    	@include hover() {
-    		color: $btn-stroke--color--hover;
-    		background-color: $btn-stroke--bg-color--hover;
-    		border: $btn-stroke--border--hover;
-    	}
-    }
-    // sizes
-    &--small {
-    	padding: {
-			top: $btn-small--padding-top;
-			right: $btn-small--padding-right;
-			bottom: $btn-small--padding-bottom;
-			left: $btn-small--padding-left;
-		}
-		font-size: $btn-small--font-size;
-    }
-    &--large {
-    	padding: {
-			top: $btn-large--padding-top;
-			right: $btn-large--padding-right;
-			bottom: $btn-large--padding-bottom;
-			left: $btn-large--padding-left;
-		}
-		font-size: $btn-large--font-size;
+        .ico {
+            font-size: 10px;
+            transform: translateX(0);
+            @include transition();
+            + span {
+                padding-left: 0;
+            }
+            &[class*="left"] {
+                margin-right: 5px;
+            }
+            &[class*="right"] {
+                margin-left: 5px;
+            }
+        }
     }
 	// other
 	&--block {

@@ -1,6 +1,78 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif:700&subset=latin-ext');
 
+// 
+// PROJECT ICONS
+// 
+
+@font-face {
+  font-family: $project-font-family-icon;
+  src:
+    url('../fonts/ico-project.ttf?tsycfj') format('truetype'),
+    url('../fonts/ico-project.woff?tsycfj') format('woff'),
+    url('../fonts/ico-project.svg?tsycfj#ico-project') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ico {
+  font-family: $project-font-family-icon !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-answer:before {
+  content: "\e900";
+}
+.ico-arrow-left:before {
+  content: "\e901";
+}
+.ico-arrow-right:before {
+  content: "\e902";
+}
+.ico-cross:before {
+  content: "\e903";
+}
+.ico-email:before {
+  content: "\e904";
+}
+.ico-facebook:before {
+  content: "\e905";
+}
+.ico-instagram:before {
+  content: "\e906";
+}
+.ico-lock:before {
+  content: "\e907";
+}
+.ico-menu:before {
+  content: "\e908";
+}
+.ico-plus:before {
+  content: "\e909";
+}
+.ico-search:before {
+  content: "\e90a";
+}
+.ico-star-fill:before {
+  content: "\e90b";
+}
+.ico-star:before {
+  content: "\e90c";
+}
+.ico-user:before {
+  content: "\e90d";
+}
+.ico-youtube:before {
+  content: "\e90e";
+}
+
 
 
 // 
