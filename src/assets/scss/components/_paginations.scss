@@ -1,37 +1,47 @@
-// by Damian Bonar
-
 $pagination-margin: $default-margin;
-$pagination-color: $default-font-color;
-$pagination-font-size: $default-font-size;
+$pagination-color: $heading-color;
+$pagination-font-family: $default-font-family;
+$pagination-font-size: 12px;
+$pagination-font-weight: 600;
 
-$pagination-list-item-margin: 0 2px;
-$pagination-list-item-width: 35px;
-$pagination-list-item-height: 35px;
-$pagination-list-item-radius: $default-radius;
-$pagination-list-item-color: #fff;
-$pagination-list-item-background-color: $key-color-2;
-$pagination-list-item-border: 1px $key-color-2 solid;
-$pagination-list-item-font-weight: $default-font-weight;
+$pagination-list-item-margin: 0 5px;
+$pagination-list-item-width: 50px;
+$pagination-list-item-height: 50px;
+$pagination-list-item-radius: 50px;
+$pagination-list-item-color: $gray;
+$pagination-list-item-background-color: #fff;
+$pagination-list-item-border: 2px solid $gray-light;
+$pagination-list-item-font-weight: 700;
 
-$pagination-list-item-color-hover: #fff;
-$pagination-list-item-background-color-hover: $key-color-1;
-$pagination-list-item-border-hover: 1px $key-color-1 solid;
+$pagination-list-item-color-hover: $heading-color;
+$pagination-list-item-background-color-hover: #fff;
+$pagination-list-item-border-hover: $pagination-list-item-border;
 
 $pagination-list-item-color-active: $pagination-list-item-color-hover;
 $pagination-list-item-background-color-active: $pagination-list-item-background-color-hover;
 $pagination-list-item-border-active: $pagination-list-item-border-hover;
 
-$pagination-list-item-opacity-disabled: 0.5;
+$pagination-list-item-opacity-disabled: .5;
 
-$pagination-list-item-next-prev-font-size: $pagination-font-size;
+$pagination-list-item-next-prev-font-size: 10px;
 
 
 .pagination {
+    font-family: $pagination-font-family;
     font-size: $pagination-font-size;
+    font-weight: $pagination-font-weight;
     color: $pagination-color;
     margin: $pagination-margin;
     @extend .flex, .flex--center-y;
-    
+    &--start {
+        @extend .flex--start-x;
+    }
+    &--center {
+        @extend .flex--center-x;
+    }
+    &--end {
+        @extend .flex--end-x;
+    }
     ol {
         list-style: none;
         margin: 0;
@@ -41,14 +51,16 @@ $pagination-list-item-next-prev-font-size: $pagination-font-size;
         li {
             margin: $pagination-list-item-margin;
             padding: 0;
-			
+			border-radius: 50px;
             &.is-disabled {
             	opacity: $pagination-list-item-opacity-disabled;
             	pointer-events: none;
 				-webkit-touch-callout: none;
 				user-select: none;
             } 
-            
+            &.is-active {
+                box-shadow: $default-box-shadow-half;
+            }
             a,
             span,
 			em {
@@ -68,7 +80,7 @@ $pagination-list-item-next-prev-font-size: $pagination-font-size;
 				    color: $pagination-list-item-color-hover;
 					background-color: $pagination-list-item-background-color-hover;
 					border: $pagination-list-item-border-hover;
-					
+					box-shadow: $default-box-shadow;
 				}
             }
             
@@ -83,11 +95,84 @@ $pagination-list-item-next-prev-font-size: $pagination-font-size;
 			}
         }
     }
-
 	&__prev,
 	&__next {
+        color: $gray;
+        position: relative;
+        overflow: hidden;
 		font-size: $pagination-list-item-next-prev-font-size;
+        @include transition();
+        .ico,
+        .ico-default {
+            color: inherit;
+        }
 	}
+    // hover
+    &__prev {
+        @include hover() {
+            box-shadow: $default-box-shadow;
+            .ico {
+                &::before {
+                    right: calc(100% + 20px);
+                }
+                &::after {
+                    right:50%;
+                    transform: translate3d(50%, -50%, 0);
+                }
+            }
+        }
+        .ico {
+            &::before {
+                position: absolute;
+                right: 50%;
+                top:50%;
+                transform: translate3d(50%, -50%, 0);
+                @include transition(right);
+            }
+            &::after {
+                content: '\e901';
+                font-family: $project-font-family-icon;
+                position: absolute;
+                right:-20px;
+                top: 50%;
+                transform: translateY(-50%);
+                @include transition(right);
+            }
+        }
+    }
+    // hover
+    &__next {
+        @include hover() {
+            box-shadow: $default-box-shadow;
+            .ico {
+                &::before {
+                    left: calc(100% + 20px);
+                }
+                &::after {
+                    left:50%;
+                    transform: translate3d(-50%, -50%, 0);
+                }
+            }
+        }
+        .ico {
+            &::before {
+                position: absolute;
+                left: 50%;
+                top:50%;
+                transform: translate3d(-50%, -50%, 0);
+                @include transition(left);
+            }
+            &::after {
+                content: '\e902';
+                font-family: $project-font-family-icon;
+                position: absolute;
+                left:-20px;
+                top: 50%;
+                transform: translateY(-50%);
+                @include transition(left);
+            }
+        }
+    }
     
     @include max-screen($sm-max) {
     	justify-content: center !important;

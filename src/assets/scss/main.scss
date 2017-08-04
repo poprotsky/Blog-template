@@ -3,7 +3,7 @@ Project: Zdrowe życie;
 Author: Eugeniusz Poprocki;
 
 Created date: 2017-08-01; 
-Last update date: 2017-08-02;
+Last update date: 2017-08-04;
 
 Version: 1.0;
 */
@@ -14,7 +14,6 @@ Version: 1.0;
     'vendors/_flexboxgrid.scss',
     'vendors/_media-queries.scss',
     'vendors/_fancybox.scss',
-	'vendors/_jcf.scss',
 	'vendors/owl/_owl.carousel.scss',
     
     'helpers/_mixins.scss',
@@ -25,6 +24,7 @@ Version: 1.0;
     'base/_fonts.scss',
     
 	'components/_alerts.scss',
+    'components/_animations.scss',
 	'components/_buttons.scss',
 	'components/_forms.scss',
 	'components/_lists.scss',
@@ -32,6 +32,11 @@ Version: 1.0;
     'components/_paginations.scss',
 	'components/_sliders.scss',
     'components/_wysiwyg.scss',
+    'components/_tags.scss',
+    'components/_jcf-checkbox.scss',
+    'components/_jcf-radio.scss',
+    'components/_jcf-select.scss',
+    'components/_post.scss',
 	 
 	'layout/_grid.scss',
 	'layout/_breadcrumbs.scss', 

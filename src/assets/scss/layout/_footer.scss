@@ -1,19 +1,177 @@
 .footer {
-	background-color: #29445a;
-	color: #FFF;
+	background-color: #fff;
+	color: $default-font-color;
+	border-top: 2px solid $gray-light;
 	font-size: 14px;
-	padding: 30px 0;
-	
-	p {
-		margin-bottom: 0;
+	padding: 0;
+	&__inner {
+		padding: 100px 0;
+		@include max-screen($sm-max) {
+			padding: 80px 0;
+		}
+		@include max-screen($xs-max) {
+			padding: 50px 0;
+		}
+	}
+	&__list {
+		@include max-screen($sm-max) {
+			display: flex;
+			flex-flow: row wrap;
+			margin-bottom: 40px;
+		}
+		li {
+			@extend .flex;
+			@include max-screen($sm-max) {
+				flex: 0 0 50%;
+			}
+			@include max-screen($xxs-max) {
+				flex: 0 0 100%;
+			}
+			a {
+				display: inline-block;
+				color: $gray;
+				font-size: 14px;
+				font-weight: 700;
+				letter-spacing: .5px;
+				text-transform: uppercase;
+				margin-bottom: 15px;
+				@include hover() {
+					color: $default-font-color;
+					transform: translateX(5px);
+				}
+			}
+		}
+	}
+	&__title {
+		display: block;
+		color: $default-font-color;
+		font-size: 16px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		font-weight: 700;
+		line-height: 1.5;
+		margin-bottom: 30px;
+	}
+	&__newsletter {
+		@include max-screen($xs-max) {
+			margin-bottom: 40px;
+		}
+		.field-group {
+			position: relative;
+			button {
+				position: absolute;
+				top: 0;
+				bottom:0;
+				right:0;
+				background-color: #fff;
+				border: 2px solid $gray-light;
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+				font-size: 10px;
+				@include transition();
+				@include hover() {
+					background-color: $gray-light;
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+	&__desc {
+		margin-top: 40px;
+		.footer__title {
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 14px;
+			color: $gray;
+			line-height: 2;
+			text-align: justify;
+		}
+	}
+	&__partner {
+		@extend .flex, .flex--column, .flex--end-y;
+		span {
+			font-size: 14px;
+			color: $gray;
+			line-height: 2;
+		}
+		img {
+			max-width: 130px;
+			@include transition();
+			@include hover() {
+				opacity: .5;
+			}
+		}
+	}
+	&__social-links {
+		@extend .flex, .flex--nowrap;
+	}
+	&__social-link {
+		@extend .flex, .flex--inline;
+		position: relative;
+		text-align: center;
+		width: 50px;
+		height: 50px;
+		color: #fff;
+		border-radius: 50px;
+		margin-right: 15px;
+		font-size: 15px;
+		@include transition();
+		@include hover() {
+			color: #fff;
+			box-shadow: $default-box-shadow;
+			transform: scale(1.1);
+		}
+		&--facebook {
+			@extend .ico, .ico-facebook;
+			background-color: #3b5998;
+			font-size: 15px;
+		}
+		&--youtube {
+			@extend .ico, .ico-youtube;
+			background-color: #d42428;
+		}
+		&--instagram {
+			@extend .ico, .ico-instagram;
+			background-color: #8a3ab9;
+		}
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate3d(-50%, -50%, 0);
+		}
+	}
+
+	&__copyright {
+		border-top: 2px solid $gray-light;
+		padding: 30px 0;
+		&-inner {
+			@extend .flex, .flex--space-between, .flex--center-y, .flex--nowrap;
+			@include max-screen($xs-max) {
+				flex-direction: column;
+			}
+		}
+		p {
+			margin-bottom: 0;
+			font-size: 14px;
+			color: $gray;
+			@include max-screen($xs-max) {
+				text-align: center;
+				margin-bottom: 10px;
+			}
+			span {
+				color: $default-font-color;
+			}
+			a {
+				color: $default-font-color;
+				text-decoration: underline;
+				@include hover() {
+					opacity: .5;
+				}
+			}
+		}
 	}
 	
-	&__copy {
-		margin-right: 30px;
-		padding: 3px 0;
-	}
-	
-	&__create {
-		padding: 3px 0;
-	}
 }

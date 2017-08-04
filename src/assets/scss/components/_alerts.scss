@@ -1,12 +1,11 @@
-// by Eugeniusz Poprocki
 
 // alert | default
 $alert-position: relative;
-$alert-padding: 25px;
+$alert-padding: 30px 30px 28px 30px;
 $alert-margin: $default-margin;
-$alert-border: 1px solid transparent;
-$alert-border-radius: $default-radius;
-$alert-font-size: $default-font-size;
+$alert-border: 2px solid transparent;
+$alert-border-radius: 0;
+$alert-font-size: 16px;
 
 // title 
 $alert-title-font-size: 20px;
@@ -17,24 +16,24 @@ $alert-ul-list-style: disc;
 $alert-ul-padding-left: 20px;
 
 // alert success
-$alert-success--color: #3c763d;
-$alert-success--bg-color: #dff0d8;
-$alert-success--border-color: #d6e9c6;
+$alert-success--color: #fff;
+$alert-success--bg-color: $green;
+$alert-success--border-color: #228a75;
 
 // alert info
-$alert-info--color: #31708f;
-$alert-info--bg-color: #d9edf7;
-$alert-info--border-color: #bce8f1;
+$alert-info--color: #fff;
+$alert-info--bg-color: $blue;
+$alert-info--border-color: #1766a6;
 
 // alert warning
-$alert-warning--color: #8a6d3b;
-$alert-warning--bg-color: #fcf8e3;
-$alert-warning--border-color: #faebcc;
+$alert-warning--color: #fff;
+$alert-warning--bg-color: $yellow;
+$alert-warning--border-color: #b28705;
 
 // alert danger
-$alert-danger--color: #a94442;
-$alert-danger--bg-color: #f2dede;
-$alert-danger--border-color: #ebccd1;
+$alert-danger--color: #fff;
+$alert-danger--bg-color: $pink;
+$alert-danger--border-color: #9c1441;
 
 // alert fixed
 $alert-fixed--position-top: 0;
@@ -46,10 +45,10 @@ $alert-fixed--margin-bottom: 0;
 $alert-fixed--border-radius: 0;
 
 // alert icon ::before
-$alert-icon--padding-left: 50px;
-$alert-icon-before--font-size: 22px;
+$alert-icon--padding-left: 70px;
+$alert-icon-before--font-size: 30px;
 $alert-icon-before--position-top: 20px;
-$alert-icon-before--position-left: 15px;
+$alert-icon-before--position-left: 20px;
 $alert-icon-before--font-family: $default-font-family-icon;
 
 $alert-icon-before--content-success: '\e008';
@@ -66,7 +65,7 @@ $alert-icon-before--content-danger: '\e007';
 	position: $alert-position;
 	padding: $alert-padding;
 	margin: $alert-margin;
-	border: $alert-border;
+	border-bottom: $alert-border;
 	border-radius: $alert-border-radius;
 	font-size: $alert-font-size;
 	
@@ -126,6 +125,7 @@ $alert-icon-before--content-danger: '\e007';
 		&.alert--icon {
 			&::before {
 				content: $alert-icon-before--content-success;
+				color: #228a75;
 			}
 		}
 	}
@@ -137,6 +137,7 @@ $alert-icon-before--content-danger: '\e007';
 		&.alert--icon {
 			&::before {
 				content: $alert-icon-before--content-info;
+				color: #1766a6;
 			}
 		}
 	}
@@ -148,6 +149,7 @@ $alert-icon-before--content-danger: '\e007';
 		&.alert--icon {
 			&::before {
 				content: $alert-icon-before--content-warning;
+				color: #b28705;
 			}
 		}
 	}
@@ -159,6 +161,7 @@ $alert-icon-before--content-danger: '\e007';
 		&.alert--icon {
 			&::before {
 				content: $alert-icon-before--content-danger;
+				color: #9c1441;
 			}
 		}
 	}

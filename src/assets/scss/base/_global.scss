@@ -30,7 +30,6 @@ body {
     -webkit-appearance: none;
     background: $bg-color-body;
     @include transition(padding-top);
-	padding-top: 135px;
 }
 
 h1,
@@ -326,21 +325,22 @@ table {
     border-spacing: 0;
     width: 100%;
     margin: $default-margin;
-    font-family: inherit;
+    font-family: inherit; 
+    font-size: 16px;
 }
 
 table th, table td {
     padding: 15px 25px;
     line-height: $default-line-height;
     vertical-align: middle;
-    border: 1px $key-color-2 solid;
+    border: 1px solid $gray-light;
 }
 
 table th {
     font-weight: $default-font-weight-bold;
     text-align: left;
-    background-color: $key-color-2;
-    color: #FFF;
+    background-color: $gray-light;
+    color: $default-font-color;
 }
 
 blockquote {

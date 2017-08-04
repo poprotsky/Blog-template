@@ -13,9 +13,9 @@ $btn-group--btn-margin: 5px;
 //
 $btn-margin: $clear-margin;
 
-$btn-padding-top: 18px;
+$btn-padding-top: 17px;
 $btn-padding-right: 30px;
-$btn-padding-bottom: 18px;
+$btn-padding-bottom: 17px;
 $btn-padding-left: 30px;
 
 $btn-text-align: center;
@@ -193,6 +193,26 @@ $btn-primary--border-radius: 0;
 		width: 100%;
 		min-width: 0;
 	}
+    &--fixed {
+        position: fixed;
+        z-index: 99;
+        &-top-left {
+            top: 100px;
+            left: 30px;
+        }
+        &-top-right {
+            top: 100px;
+            right: 30px;
+        }
+        &-bottom-left {
+            bottom: 30px;
+            left: 30px;
+        }
+        &-bottom-right {
+            bottom: 30px;
+            right: 30px;
+        }
+    }
 }
 
 

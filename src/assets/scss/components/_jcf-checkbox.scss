@@ -1,0 +1,56 @@
+.jcf-checkbox {
+    // checkbox square
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    cursor: default;
+    background: #fff;
+    border: 2px solid $gray-light;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    flex: 0 0 auto;
+    @include transition();
+    
+    // checked icon
+    span {
+        position: absolute;
+        opacity: 0;
+        height: 4px;
+        width: 8px;
+        top: 50%;
+        left: 50%;
+        border: 2px solid $default-font-color;
+        border-width: 0 0 2px 2px;
+        transform: rotate(-45deg) translate3d(0%, 50%, 0);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";
+        @include transition();
+    }
+
+    input[type="checkbox"] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        margin: 0;
+        left: 0;
+        top: 0;
+    }
+
+    &.jcf-checked {
+        background-color: $gray-light;
+        border-color: transparent;
+        ~ .checkbox__label {
+            color: $heading-color;
+        }
+        span {
+            opacity: 1;
+        }
+    }
+}
+
+:root .jcf-checkbox span {
+    margin:-4px 0 0 -5px;
+}
+

@@ -11,10 +11,10 @@ $color-dark:			$default-font-color !default;
 
 $nav-color: 			$color-dark !default;
 $nav-color-hover:		$color-white !default;
-$nav-font-size: 		15px !default;
-$nav-rounded: 			0 !default;
-$nav-margin: 			0 15px !default;
-$nav-padding: 			6px 10px !default;
+$nav-font-size: 		10px !default;
+$nav-rounded: 			50px !default;
+$nav-margin: 			0 30px !default;
+$nav-padding: 			12px !default;
 $nav-background: 		$color-white !default;
 $nav-background-hover:	$color-base !default;
 $nav-disabled-opacity: 	0.5 !default;
@@ -35,7 +35,7 @@ $dot-background-active:	$color-base !default;
 		position: absolute;
 		width: 100%;
 		top: 50%;
-		@include translate(0,-50%);
+		@include translate(0,calc(-50% + 35px));
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
 		pointer-events: none;
@@ -45,6 +45,9 @@ $dot-background-active:	$color-base !default;
 		[class*='owl-'] {
 			color: $nav-color;
 			font-size: $nav-font-size;
+			width: 36px;
+			height: 36px;
+			opacity: .5;
 			margin: $nav-margin;
 			padding: $nav-padding;
 			background: $nav-background;
@@ -58,6 +61,7 @@ $dot-background-active:	$color-base !default;
 				background: $nav-background-hover;
 				color:$nav-color-hover;
 				text-decoration: none;
+				opacity: 1;
 			}
 		}
 		
@@ -110,25 +114,43 @@ $dot-background-active:	$color-base !default;
 	}
 }
 
-
+.owl-item {
+	&.active {
+		.post {
+			opacity: 1 !important;
+			transform: translateX(0);
+		}
+	}
+}
 
 .slider {
 	position: relative;
-	
+	padding-top: 70px;
 	&__item {
 		width: 100%;
-		height: 600px;
-		color: #FFF;
-		font-size: 5rem;
-		text-shadow: 0 0 10px rgba(0,0,0,0.8);
-		text-align: center;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		
-		> .container {
-			margin-left: 0;
-			margin-right: 0;
+		height: 500px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.container {
+		height: inherit;
+	}
+	&__content {
+		height: inherit;
+		padding: 100px 0;
+		@extend .flex, .flex--center-y;
+		.row {
+			width: 100%;
 		}
+	}
+	
+	.post {
+		opacity: 0 !important;
+		transform: translateX(-50px);
+		width: 100%;
+		height: 255px;
+		margin-bottom: 0;
+		transition: transform .5s ease-out .3s, opacity .5s ease-out .3s, box-shadow .5s ease-out;
 	}
 }

@@ -1,0 +1,20 @@
+.tags {
+    @extend .flex;
+    &__item {
+        flex: 0 0 auto;
+        font-size: 11px;
+        font-weight: 600;
+        color: $gray;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        padding: 10px;
+        background-color: $gray-light;
+        border-radius: 100px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+        @include hover() {
+            background-color: #fff;
+            box-shadow: $default-box-shadow-half;
+        }
+    }
+}

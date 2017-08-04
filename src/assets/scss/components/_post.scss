@@ -1,0 +1,237 @@
+.post {
+    @extend .flex, .flex--column, .flex--stretch;
+    height: 510px;
+    flex: 0 0 auto;
+    background-color: #fff;
+    margin-bottom: 30px;
+    @include transition();
+
+    @include hover() {
+        box-shadow: $default-box-shadow;
+        transform: translateY(-5px);
+        .post__img {
+            img {
+                opacity: .5;
+                transform: scale(1.1) translateZ(0);
+            }
+        }
+        .post__date {
+            > span {
+                opacity: 0;
+            }
+            .btn {
+                transform: translateY(0);
+            }
+        }
+    }
+    // colors
+    &--orange {
+        .post {
+            &__img {
+                background-color: $orange;
+            }
+            &__category {
+                color: $orange;
+                &::before {
+                    background-color: $orange;
+                }
+            }
+            &__date {
+                .btn {
+                    color: $orange;
+                }
+            }
+        }
+    }
+    &--violet {
+        .post {
+            &__img {
+                background-color: $violet;
+            }
+            &__category {
+                color: $violet;
+                &::before {
+                    background-color: $violet;
+                }
+            }
+            &__date {
+                .btn {
+                    color: $violet;
+                }
+            }
+        }
+    }
+    &--blue {
+        .post {
+            &__img {
+                background-color: $blue;
+            }
+            &__category {
+                color: $blue;
+                &::before {
+                    background-color: $blue;
+                }
+            }
+            &__date {
+                .btn {
+                    color: $blue;
+                }
+            }
+        }
+    }
+    &--green {
+        .post {
+            &__img {
+                background-color: $green;
+            }
+            &__category {
+                color: $green;
+                &::before {
+                    background-color: $green;
+                }
+            }
+            &__date {
+                .btn {
+                    color: $green;
+                }
+            }
+        }
+    }
+    &--pink {
+        .post {
+            &__img {
+                background-color: $pink;
+            }
+            &__category {
+                color: $pink;
+                &::before {
+                    background-color: $pink;
+                }
+            }
+            &__date {
+                .btn {
+                    color: $pink;
+                }
+            }
+        }
+    }
+    &--yellow {
+        .post {
+            &__img {
+                background-color: $yellow;
+            }
+            &__category {
+                color: $yellow;
+                &::before {
+                    background-color: $yellow;
+                }
+            }
+            &__date {
+                .btn {
+                    color: $yellow;
+                }
+            }
+        }
+    }
+
+    // elements
+    &__img {
+        @extend .flex, .flex--center;
+        position: relative;
+        background-color: #000;
+        overflow: hidden;
+        width: 100%;
+        height: 255px;
+        @include max-screen($sm-max) {
+            height: 225px;
+        }
+        @include max-screen($xxs-max) {
+            height: 200px;
+        }
+        img {
+            width: 100%;
+            max-width: initial;
+            @extend .absolute;
+            @include transition();
+            transform: translateZ(0);
+        }
+    }
+    &__text {
+        @extend .flex, .flex--column, .flex--space-between;
+        flex: 1 0 auto;
+        padding: 40px;
+        overflow: hidden;
+    }
+    &__footer {
+        @extend .flex, .flex--space-between, .flex--center-y;
+        width: 100%;
+        .ico,
+        .ico-default {
+            color: $gray;
+            @include transition();
+            @include hover() {
+                color: $yellow;
+            }
+            &.ico-star-fill {
+                color: $yellow;
+                @include hover() {
+                    color: $gray;
+                }
+            }
+        }
+
+    }
+    &__category {
+        display: block;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 5px 0;
+        padding-left: 12px;
+        position: relative;
+        margin-bottom: 20px;
+        line-height: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            width: 2px;
+            background-color: $default-font-color;
+        }
+    }
+    &__title {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: $alt-font-family;
+        line-height: 1.4;
+        max-height: 84px;
+        overflow: hidden;
+    }
+    &__date {
+        position: relative;
+        > span {
+            display: block;
+            color: $gray;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+            position: relative;
+            line-height: 1;
+            @include transition();
+        }
+        .btn {
+            @extend .absolute;
+            width: 200%;
+            transform: translateY(60px);
+            .ico {
+                color: inherit;
+            }
+        }
+    }
+
+}
