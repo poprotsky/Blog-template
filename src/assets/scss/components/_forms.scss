@@ -180,6 +180,9 @@ textarea {
 .form {
     $this: &;
     margin: $form-margin;
+    &__footer {
+        @extend .flex, .flex--center-y, .flex--space-between;
+    }
     .form-group {
         margin-bottom: 30px;
         label:not(.checkbox__label):not(.radio__label) {

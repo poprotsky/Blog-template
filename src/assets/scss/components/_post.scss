@@ -1,3 +1,4 @@
+// post item
 .post {
     @extend .flex, .flex--column, .flex--stretch;
     height: 510px;
@@ -5,7 +6,9 @@
     background-color: #fff;
     margin-bottom: 30px;
     @include transition();
-
+    @include max-screen($xs-max) {
+        height: initial;
+    }
     @include hover() {
         box-shadow: $default-box-shadow;
         transform: translateY(-5px);
@@ -145,8 +148,8 @@
         @include max-screen($sm-max) {
             height: 225px;
         }
-        @include max-screen($xxs-max) {
-            height: 200px;
+        @include max-screen($xs-max) {
+            height: initial;
         }
         img {
             width: 100%;
@@ -154,6 +157,9 @@
             @extend .absolute;
             @include transition();
             transform: translateZ(0);
+            @include max-screen($xs-max) {
+                position: static;
+            }
         }
     }
     &__text {
@@ -161,10 +167,17 @@
         flex: 1 0 auto;
         padding: 40px;
         overflow: hidden;
+        @include max-screen($xs-max) {
+            height: 250px;
+            padding: 25px;
+        }
     }
     &__footer {
         @extend .flex, .flex--space-between, .flex--center-y;
         width: 100%;
+        @include max-screen($xs-max) {
+            margin-top: 30px;
+        }
         .ico,
         .ico-default {
             color: $gray;
@@ -192,6 +205,9 @@
         position: relative;
         margin-bottom: 20px;
         line-height: 1;
+        @include max-screen($xs-max) {
+            font-size: 10px;
+        }
         &::before {
             content: '';
             position: absolute;
@@ -210,6 +226,9 @@
         line-height: 1.4;
         max-height: 84px;
         overflow: hidden;
+        @include max-screen($xs-max) {
+            font-size: 16px;
+        }
     }
     &__date {
         position: relative;
@@ -223,6 +242,9 @@
             position: relative;
             line-height: 1;
             @include transition();
+            @include max-screen($xs-max) {
+                font-size: 10px;
+            }
         }
         .btn {
             @extend .absolute;
@@ -234,4 +256,155 @@
         }
     }
 
+}
+
+// post page
+.post-info {
+    &__inner {
+        @extend .flex, .flex--center-y, .flex--space-between, .flex--nowrap;
+        padding: 20px 0;
+        border-bottom: 2px solid $gray-light;
+    }
+    &__label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $gray;
+        font-weight: 600;
+        @include max-screen($sm-max) {
+            &:first-child {
+                display: none;
+            }
+        }
+        @include max-screen($xs-max) {
+            &:last-child {
+                span {
+                    display: none;
+                }
+            }
+        }
+        .ico {
+            color: inherit;
+            &-star {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+// post page tags and comments
+.post {
+    &__tags {
+        border-top: 2px solid $gray-light;
+        padding: 20px 0 40px;
+        &-title {
+            @extend .h5;
+            font-family: $default-font-family;
+
+        }
+    }
+    &__comments {
+        background-color: $gray-light;
+        padding: 60px 0 100px;
+        &-header {
+            @extend .flex, .flex--center-y, .flex--space-between, .flex--nowrap;
+            margin-bottom: 20px;
+        }
+        &-title {
+            @extend .h5;
+            font-family: $default-font-family;
+            margin-bottom: 0;
+        }
+        .ico-answer {
+            font-size: 16px;
+        }
+    }
+}
+
+.comments-item {
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 10px;
+    @include max-screen($xs-max) {
+        padding: 20px;
+    }
+    &--answer {
+        margin-left: 30px;
+        width: calc(100% - 30px);
+        @include max-screen($xs-max) {
+            margin-left: 20px;
+            width: calc(100% - 20px);
+        }
+    }
+    &--form {
+        .form {
+            margin-bottom: 0;
+        }
+        .comments-item__title {
+            font-size: 18px;
+        }
+    }
+    &__header {
+        @extend .flex, .flex--center-y, .flex--space-between, .flex--nowrap;
+        margin-bottom: 20px;
+        &-main {
+            @extend .flex, .flex--center-y, .flex--space-between, .flex--nowrap;
+        }
+    }
+    &__avatar {
+        display: inline-block;
+        flex: 0 0 auto;
+        width: 60px;
+        height: 60px;  
+        background-color: $default-font-color;
+        border-radius: 60px; 
+        margin-right: 20px;
+        overflow: hidden;
+        @include max-screen($xs-max) {
+            width: 40px;
+            height: 40px;  
+        }
+    }
+    &__title {
+        display: block;
+        font-size: 16px;
+        font-family: $default-font-family;
+        font-weight: 600;
+        margin-bottom: 2px;
+        line-height: 1.2;
+    }
+    &__time {
+        display: block;
+        font-size: 12px;
+        color: $gray;
+        font-weight: 600;
+    }
+    &__desc {
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 0;
+        margin-left: 80px;
+        @include max-screen($xs-max) {
+            margin-left: 60px;
+        }
+    }
+    &__answer {
+        color: $gray;
+        span {
+            @include max-screen($xs-max) {
+                display: none;
+            }
+        }
+        .ico { 
+            color: inherit;
+        }
+    }
+}
+
+// post page
+.post-page {
+    .wysiwyg {
+        margin-bottom: 100px;
+    }
 }

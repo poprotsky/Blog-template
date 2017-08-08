@@ -1,3 +1,9 @@
+html {
+    &.is-sidebar-open {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
 .sidebar {
     &--fixed {
         display: flex !important;
@@ -107,6 +113,7 @@
 }
 
 .page-content {
+    position: relative;
 	padding: 100px 0;
 }
 
