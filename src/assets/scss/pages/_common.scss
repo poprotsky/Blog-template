@@ -122,6 +122,18 @@ html {
     &__header {
         @extend .flex, .flex--space-between, .flex--center-y;
         margin-bottom: 30px;
+        .btn {
+            color: $gray;
+            @include hover() {
+                color: $default-font-color;
+                .ico {
+                    color: $default-font-color;
+                }
+            }
+            .ico {
+                color: $gray;
+            }
+        }
     }
     &__title {
         font-family: $default-font-family;

@@ -1,0 +1,118 @@
+.fancybox-bg {
+    background-color: rgba(#000, .5);
+}
+
+.popup {
+    display: none;
+    width: 440px;
+    padding: 0;
+    position: relative;
+    overflow: visible;
+    @include transition();
+    @include max-screen($xxs-max) {
+        width: 100%;
+    }
+    // active
+    .fancybox-slide--current & {
+        transform: translateY(0);
+    }
+    // close
+    .fancybox-container--closing & {
+        transform: translateY(100px);
+    }
+    &__inner {
+
+    }
+    &__content {
+        padding: 40px;
+    }
+    .alert {
+        padding: 20px;
+        &__title {
+            font-size: 16px;
+        }
+        .head-label {
+            font-size: 10px;
+        }
+        p {
+            font-size: 14px;
+            padding-top: 10px;
+        }
+    }
+    .form {
+        margin-bottom: 0;
+    }
+    &__head {
+        &-label {
+            display: block;
+            position: relative;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: rgba($default-font-color, .5);
+            padding-left: 12px;
+            margin-bottom: 30px;
+            &::before {
+                content: '';
+                position: absolute;
+                top:0;
+                left:0;
+                bottom:0;
+                width: 2px;
+                background-color: rgba($default-font-color, .5);
+            }
+        }
+        &-title {
+            display: block;
+            font-size: 20px;
+            font-family: $alt-font-family;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+    }
+    &__link {
+        display: inline-block;
+        font-size: 12px;
+        text-decoration: underline;
+        text-transform: uppercase;
+        color: $gray;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+    &__footer {
+        @extend .flex;
+        padding-top: 40px;
+        > span {
+            @extend .popup__link;
+            text-decoration: none;
+        }
+    }
+    &__close {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right:0;
+        @extend .ico, .ico-cross;
+        color: $default-font-color;
+        font-size: 12px;
+        padding: 20px;
+        @include transition();
+        @include hover() {
+            background-color: $default-font-color;
+            color: #fff;
+        }
+    }
+    .fancybox-close-small,
+    .fancybox-close-small:focus::after {
+        display: none;
+    }
+
+}
+
+// open
+.fancybox-slide--current {
+    transform: translateY(-50px);
+    @include transition();
+}

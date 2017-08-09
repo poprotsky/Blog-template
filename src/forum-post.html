@@ -2,7 +2,7 @@
 <html lang="pl">
     <head>
         <meta charset="UTF-8">
-        <title>Profil</title>
+        <title>Forum post</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="assets/css/main.min.css">
@@ -50,7 +50,7 @@
                             </li>
                             <li class="top__nav-item-green"><a href="#">Dietetyka</a></li>
                             <li class="top__nav-item-pink"><a href="#">Psychologia</a></li>
-                            <li><a href="#">Forum</a></li>
+                            <li class="is-active"><a href="#">Forum</a></li>
                             <li><a href="#">Wydarzenia</a></li>
                         </ul>
                     </nav>
@@ -74,224 +74,100 @@
             </div>
         </header>
 
-        <div class="breadcrumbs-container" data-stellar-background-ratio="0.8" style="background-image: url('assets/img/alt-bg.jpg')">
+        <div class="breadcrumbs-container" data-stellar-background-ratio="0.8" style="background-image: url('assets/img/forum-bg.jpg')">
             <div class="container">
                 <div class="breadcrumbs-container__inner">
-                    <h1 class="page-title">Twój profil</h1>
+                    <h1 class="page-title">Forum</h1>
                     <ul class="breadcrumbs">
                         <li><a href="#">Strona główna</a></li>
-                        <li><a href="#" class="breadcrumbs__current-page is-disabled">Twój profil</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Kategoria</a></li>
+                        <li><a href="#" class="breadcrumbs__current-page is-disabled">Nazwa tematu</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <main class="main">
+            <!-- fixed content -->
+            <button class="btn btn--fixed btn--fixed-bottom-right js-sidebar-open"><i class="ico ico-answer"></i><span>Napisz odpowiedź</span></button>
+            <!-- static content -->
             <div class="page-content gray-bg">
                 <div class="container">
-                    <div class="section profile">
-                        <header class="section__header">
-                            <h5 class="section__title">Witaj, Jan kowalski</h5>
-                            <a href="#" class="btn btn--primary"><span>Wyloguj się</span><i class="ico ico-arrow-right"></i></a>
-                        </header>
-                        <div class="profile__inner">
-                            <form action="" class="form">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="profile__avatar">
-                                            <div class="profile__img">
-                                                <img src="assets/img/default-img.png" alt="">
-                                            </div>
-                                            <div class="profile__avatar-info">
-                                                <span class="profile__avatar-info-title">Twój avatar</span>
-                                                <span class="profile__avatar-info-item">Akceptowalne formaty <strong>.jpg, .png.</strong></span>
-                                                <span class="profile__avatar-info-item">Rozmiar do <strong>5mb.</strong></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7 col-lg-offset-1">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="">Twój e-mail</label>
-                                                    <div class="field-group is-disabled">
-                                                        <input type="email" name="email" placeholder="example@email.com" id="" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="">Twoje imię</label>
-                                                    <div class="field-group">
-                                                        <input type="text" name="name" placeholder="Jan Kowalski" id="" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="">Twoje hasło</label>
-                                                    <div class="field-group">
-                                                        <input type="password" name="password" placeholder="********" id="" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="">Powtórz hasło</label>
-                                                    <div class="field-group">
-                                                        <input type="password" name="confirm" placeholder="********" id="" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <footer class="form__footer">
-                                            <div class="field-group">
-                                                <div class="checkbox">
-                                                    <div class="checkbox__inner">
-                                                        <input type="checkbox" name="chx" id="chx-1" checked />
-                                                        <label for="chx-1" class="checkbox__label">Chcę otrzymywać newsletter</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button class="btn"><i class="ico ico-plus"></i><span>Zapisz zmiany</span></button>
-                                        </footer>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
                     <div class="section">
-                        <header class="section__header">
-                            <h5 class="section__title">Twoje ulubione wpisy</h5>
-                            <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
-                        </header>
-                        <div class="row">
-                            <div class="col-lg-4 col-xs-6 col-xxs-12">
-                                <article class="post post--violet">
-                                    <a href="#" class="post__img">
-                                        <img src="assets/img/post-example.jpg" alt="">
-                                    </a>
-                                    <div class="post__text">
-                                        <header>
-                                            <span class="post__category">Twoje hobby</span>
-                                            <a href="#" class="post__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, reprehenderit adipisci excepturi nulla sed ad? Nam dignissimos saepe laborum blanditiis.</a>
-                                        </header>
-                                        <footer class="post__footer">
-                                            <div class="post__date">
-                                                <span>Maj 30, 2017</span>
-                                                <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
-                                            </div>
-                                            <a href="#" class="ico ico-star-fill"></a>
-                                        </footer>
+                        <div class="forum-posts-list">
+                            <div class="forum-posts-list__item">
+                                <header class="forum-posts-list__item-header">
+                                    <div class="forum-posts-list__item-main">
+                                        <div class="forum-posts-list__item-avatar">
+                                            <img src="assets/img/comments-avatar-img.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="forum-posts-list__item-title">Jan Kowalski <span class="forum-posts-list__item-label forum-posts-list__item-label--green"><span>Admin</span></span></span>
+                                            <time class="forum-posts-list__item-time">17.07.2017 | 13:07</time>
+                                        </div>
                                     </div>
-                                </article>
+                                    <a href="#" class="btn btn--primary forum-posts-list__item-answer"><span>Napisz na e-mail</span><i class="ico ico-email right"></i></a>
+                                </header>
+                                <p class="forum-posts-list__item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam mollitia dolores cupiditate, non dignissimos, esse porro molestiae impedit dolorem aliquam similique minima incidunt aspernatur, labore excepturi quaerat accusamus debitis qui.</p>
                             </div>
-                            <div class="col-lg-4 col-xs-6 col-xxs-12">
-                                <article class="post post--green">
-                                    <a href="#" class="post__img">
-                                        <img src="assets/img/post-example.jpg" alt="">
-                                    </a>
-                                    <div class="post__text">
-                                        <header>
-                                            <span class="post__category">Dietetyka</span>
-                                            <a href="#" class="post__title">Cras quis leo porttito lorem ipsum dolor</a>
-                                        </header>
-                                        <footer class="post__footer">
-                                            <div class="post__date">
-                                                <span>Maj 30, 2017</span>
-                                                <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
-                                            </div>
-                                            <a href="#" class="ico ico-star-fill"></a>
-                                        </footer>
+                            <div class="forum-posts-list__item">
+                                <header class="forum-posts-list__item-header">
+                                    <div class="forum-posts-list__item-main">
+                                        <div class="forum-posts-list__item-avatar">
+                                            <img src="assets/img/comments-avatar-img.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="forum-posts-list__item-title">John Doe <span class="forum-posts-list__item-label forum-posts-list__item-label--yellow"><span>Użytkownik</span></span></span>
+                                            <time class="forum-posts-list__item-time">17.07.2017 | 13:07</time>
+                                        </div>
                                     </div>
-                                </article>
+                                    <a href="#" class="btn btn--primary forum-posts-list__item-answer"><span>Napisz na e-mail</span><i class="ico ico-email right"></i></a>
+                                </header>
+                                <p class="forum-posts-list__item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem officiis beatae esse assumenda molestiae provident suscipit possimus repellat sapiente, itaque mollitia laborum et praesentium, nostrum cupiditate ipsam voluptatum eaque, quam aperiam omnis, accusamus quas architecto. Repellat mollitia laborum nesciunt ipsum modi minus ad vel fugit, reiciendis neque nihil quam impedit quae aliquam tempora. Corrupti fuga quasi, quos, velit excepturi libero totam nisi suscipit, facilis sed asperiores placeat nostrum repellendus pariatur aspernatur tempora. Tenetur dicta natus, sed laborum at soluta aliquam repudiandae, voluptatibus repellat aperiam nobis molestias rem accusamus quisquam nam facilis doloremque deleniti atque maxime voluptates quod voluptas nihil. Voluptatibus!</p>
                             </div>
-                            <div class="col-lg-4 col-xs-6 col-xxs-12">
-                                <article class="post post--blue">
-                                    <a href="#" class="post__img">
-                                        <img src="assets/img/post-example.jpg" alt="">
-                                    </a>
-                                    <div class="post__text">
-                                        <header>
-                                            <span class="post__category">Kompendium wiedzy</span>
-                                            <a href="#" class="post__title">Cras quis leo porttito</a>
-                                        </header>
-                                        <footer class="post__footer">
-                                            <div class="post__date">
-                                                <span>Maj 30, 2017</span>
-                                                <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
-                                            </div>
-                                            <a href="#" class="ico ico-star-fill"></a>
-                                        </footer>
+                            <div class="forum-posts-list__item">
+                                <header class="forum-posts-list__item-header">
+                                    <div class="forum-posts-list__item-main">
+                                        <div class="forum-posts-list__item-avatar">
+                                            <img src="assets/img/comments-avatar-img.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="forum-posts-list__item-title">Jan Kowalski <span class="forum-posts-list__item-label forum-posts-list__item-label--green"><span>Admin</span></span></span>
+                                            <time class="forum-posts-list__item-time">17.07.2017 | 13:07</time>
+                                        </div>
                                     </div>
-                                </article>
+                                    <a href="#" class="btn btn--primary forum-posts-list__item-answer"><span>Napisz na e-mail</span><i class="ico ico-email right"></i></a>
+                                </header>
+                                <p class="forum-posts-list__item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, minima molestias voluptates ducimus consequatur pariatur nihil dolore sed mollitia id reiciendis neque maiores a. Assumenda veritatis, perferendis dolorum recusandae praesentium asperiores nulla eveniet iste quis, sunt. Beatae officia dolores excepturi ea, dicta consequatur officiis odio quibusdam distinctio, in, ipsum rem.</p>
+                            </div>
+                            <div class="forum-posts-list__item">
+                                <header class="forum-posts-list__item-header">
+                                    <div class="forum-posts-list__item-main">
+                                        <div class="forum-posts-list__item-avatar">
+                                            <img src="assets/img/comments-avatar-img.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="forum-posts-list__item-title">John Doe <span class="forum-posts-list__item-label forum-posts-list__item-label--yellow"><span>Użytkownik</span></span></span>
+                                            <time class="forum-posts-list__item-time">17.07.2017 | 13:07</time>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn--primary forum-posts-list__item-answer"><span>Napisz na e-mail</span><i class="ico ico-email right"></i></a>
+                                </header>
+                                <p class="forum-posts-list__item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem officiis beatae esse assumenda molestiae provident suscipit possimus repellat sapiente, itaque mollitia laborum et praesentium, nostrum cupiditate ipsam voluptatum eaque, quam aperiam omnis, accusamus quas architecto. Repellat mollitia laborum nesciunt ipsum modi minus ad vel fugit, reiciendis neque nihil quam impedit quae aliquam tempora. Corrupti fuga quasi, quos, velit excepturi libero totam nisi suscipit, fac</p>
                             </div>
                         </div>
                     </div>
-                    <div class="section">
-                        <header class="section__header">
-                            <h5 class="section__title">Twoje ulubione wydarzenia</h5>
-                            <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
-                        </header>
-                        <div class="row">
-                            <div class="col-lg-4 col-xs-6 col-xxs-12">
-                                <article class="post post--violet">
-                                    <a href="#" class="post__img">
-                                        <img src="assets/img/post-example.jpg" alt="">
-                                    </a>
-                                    <div class="post__text">
-                                        <header>
-                                            <a href="#" class="post__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, reprehenderit adipisci excepturi nulla sed ad? Nam dignissimos saepe laborum blanditiis.</a>
-                                        </header>
-                                        <footer class="post__footer">
-                                            <div class="post__date">
-                                                <span>Maj 30, 2017</span>
-                                                <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
-                                            </div>
-                                            <a href="#" class="ico ico-star-fill"></a>
-                                        </footer>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-lg-4 col-xs-6 col-xxs-12">
-                                <article class="post post--green">
-                                    <a href="#" class="post__img">
-                                        <img src="assets/img/post-example.jpg" alt="">
-                                    </a>
-                                    <div class="post__text">
-                                        <header>
-                                            <a href="#" class="post__title">Cras quis leo porttito lorem ipsum dolor</a>
-                                        </header>
-                                        <footer class="post__footer">
-                                            <div class="post__date">
-                                                <span>Maj 30, 2017</span>
-                                                <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
-                                            </div>
-                                            <a href="#" class="ico ico-star-fill"></a>
-                                        </footer>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-lg-4 col-xs-6 col-xxs-12">
-                                <article class="post post--blue">
-                                    <a href="#" class="post__img">
-                                        <img src="assets/img/post-example.jpg" alt="">
-                                    </a>
-                                    <div class="post__text">
-                                        <header>
-                                            <a href="#" class="post__title">Cras quis leo porttito</a>
-                                        </header>
-                                        <footer class="post__footer">
-                                            <div class="post__date">
-                                                <span>Maj 30, 2017</span>
-                                                <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
-                                            </div>
-                                            <a href="#" class="ico ico-star-fill"></a>
-                                        </footer>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
+                    <div class="pagination pagination--center">
+                        <ol>
+                            <li class="pagination__prev"><a href="#"><i class="ico ico-arrow-left"></i></a></li>
+                            <li><a href="#">1</a></li>
+                            <li class="is-active"><span>2</span></li>
+                            <li><a href="#">3</a></li>
+                            <li><em>...</em></li>
+                            <li><a href="#">7</a></li>
+                            <li class="pagination__next"><a href="#"><i class="ico ico-arrow-right"></i></a></li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -357,6 +233,7 @@
                 </div>
             </div>
         </footer>
+        
 
         <!-- POPUPS -->
         <div class="popup popup--img" id="sign-in">
@@ -464,7 +341,7 @@
                 </div>
             </div>
         </div>
-        
+
         <script src="assets/js/vendor.min.js"></script>
         <script src="assets/js/main.min.js"></script>
     </body>

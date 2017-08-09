@@ -292,6 +292,113 @@
             </div>
         </footer>
         
+        <!-- POPUPS -->
+        <div class="popup popup--img" id="sign-in">
+            <div class="popup__close"></div>
+            <div class="popup__inner">
+                <div class="popup__content">
+                    <div class="popup__head">
+                        <div class="popup__head-label">Profil</div>
+                        <h2 class="popup__head-title">Zaloguj się</h2>
+                    </div>
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <label class="form__label">E-mail:</label>
+                            <div class="field-group">
+                                <input type="email" name="email" placeholder="example@email.com" tabindex="1" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form__label form__label--flex">
+                                <span>Twoje hasło:</span>
+                                <a href="javascript:void(0);" data-fancybox data-src="#forgot-password" tabindex="3" class="popup__link">Zapomniałeś?</a>
+                            </label>
+                            <div class="field-group">
+                                <input type="password" name="password" placeholder="********" tabindex="2"/>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--block"><i class="ico ico-user"></i><span>Zaloguj się</span></button>
+                        <footer class="popup__footer">
+                            <span>Nie masz konta? <a href="javascript:void(0);" data-fancybox data-src="#sign-up" class="popup__link">Zarejestruj się</a></span>
+                        </footer>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- sign up -->
+        <div class="popup popup--img" id="sign-up">
+            <div class="popup__close"></div>
+            <div class="popup__inner">
+                <div class="popup__content">
+                    <div class="popup__head">
+                        <div class="popup__head-label">Profil</div>
+                        <h2 class="popup__head-title">Zarejestruj się</h2>
+                    </div>
+                    <div class="alert alert--success">
+                        <div class="head-with-label">
+                            <div class="head-label">Powodzenie</div>
+                            <h2 class="alert__title">Formularz został wysłany!</h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, enim!</p>
+                    </div>
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <label class="form__label">E-mail:<em>*</em></label>
+                            <div class="field-group">
+                                <input type="email" name="email" placeholder="example@email.com" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form__label">Twoje imię:<em>*</em></label>
+                            <div class="field-group">
+                                <input type="text" name="name" placeholder="Jan Kowalski" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form__label">Hasło:<em>*</em></label>
+                            <div class="field-group">
+                                <input type="password" name="password" placeholder="********" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form__label">Powtórz hasło:<em>*</em></label>
+                            <div class="field-group">
+                                <input type="password" name="password" placeholder="********" />
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--block"><i class="ico ico-user"></i><span>Zarejestruj się</span></button>
+                        <footer class="popup__footer">
+                            <span>Masz konto? <a href="javascript:void(0);" data-fancybox data-src="#sign-in" class="popup__link">Zaloguj się</a></span>
+                        </footer>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- forgot password -->
+        <div class="popup popup--img" id="forgot-password">
+            <div class="popup__close"></div>
+            <div class="popup__inner">
+                <div class="popup__content">
+                    <div class="popup__head">
+                        <div class="popup__head-label">Profil</div>
+                        <h2 class="popup__head-title">Zapomniałeś hasło?</h2>
+                    </div>
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <label class="form__label">E-mail:<em>*</em></label>
+                            <div class="field-group">
+                                <input type="email" name="email" placeholder="example@email.com" tabindex="1" />
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--block"><i class="ico ico-lock"></i><span>Przywróć hasło</span></button>
+                        <footer class="popup__footer">
+                            <span><a href="javascript:void(0);" data-fancybox data-src="#sign-in" class="popup__link">Wróć do logowania</a></span>
+                        </footer>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
         <script src="assets/js/vendor.min.js"></script>
         <script src="assets/js/main.min.js"></script>
     </body>
