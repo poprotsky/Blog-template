@@ -82,7 +82,7 @@ $btn-primary--border-radius: 0;
 
 // default btn
 .btn {
-	@extend .flex;
+	@extend .flex, .flex--nowrap;
 	cursor: pointer;
     box-shadow: $default-box-shadow-half;
 	padding: {

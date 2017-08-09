@@ -182,6 +182,10 @@ textarea {
     margin: $form-margin;
     &__footer {
         @extend .flex, .flex--center-y, .flex--space-between;
+        @include max-screen($xs-max) {
+            flex-flow: column wrap;
+            align-items: flex-start;
+        }
     }
     .form-group {
         margin-bottom: 30px;

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Profil</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="assets/css/main.min.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="assets/img/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/img/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="assets/img/favicon/manifest.json">
+        <link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <header class="top" data-minimize-offset="1">
+            <div class="top__inner">
+                <div class="top__logo">
+                    <a href="#"><img src="http://placehold.it/135x40" alt=""></a>
+                </div>
+                <div class="top__nav hidden-md">
+                    <nav>
+                        <ul>
+                            <li class="top__nav-item-orange"><a href="#">Rozwój osobisty</a></li>
+                            <li class="top__nav-has-dropdown top__nav-item-violet">
+                                <a href="javascript:void(0);">Twoje hobby</a>
+                                <ul class="top__nav-dropdown">
+                                    <li><a href="#">Sport</a></li>
+                                    <li><a href="#">Artystyczne</a></li>
+                                    <li><a href="#">Inne</a></li>
+                                </ul>
+                            </li>
+                            <li class="top__nav-has-dropdown top__nav-item-blue">
+                                <a href="javascript:void(0);">Kompendium wiedzy</a>
+                                <ul class="top__nav-dropdown">
+                                    <li><a href="#">Alkohol</a></li>
+                                    <li><a href="#">Środki odurzające / narkotyki</a></li>
+                                    <li><a href="#">Leki</a></li>
+                                    <li><a href="#">Papierosy</a></li>
+                                    <li><a href="#">Seks</a></li>
+                                    <li><a href="#">Internet / komputer / telefon</a></li>
+                                    <li><a href="#">Hazard</a></li>
+                                    <li><a href="#">Zakupy</a></li>
+                                    <li><a href="#">Współuzależnienie</a></li>
+                                </ul>
+                            </li>
+                            <li class="top__nav-item-green"><a href="#">Dietetyka</a></li>
+                            <li class="top__nav-item-pink"><a href="#">Psychologia</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Wydarzenia</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <ul class="top__right">
+                    <li class="top__nav-search">
+                        <i class="ico ico-search"></i>
+                    </li>
+                    <li class="top__nav-profile">
+                        <i class="ico ico-user"></i>
+                    </li>
+                    <li class="top__nav-favorites">
+                        <i class="ico ico-star"></i>
+                    </li>
+                    <li class="menu-trigger visible-md">
+                        <span class="menu-trigger__inner">
+                            <span></span><span></span><span></span><span></span><span></span><span></span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="breadcrumbs-container" data-stellar-background-ratio="0.8" style="background-image: url('assets/img/alt-bg.jpg')">
+            <div class="container">
+                <div class="breadcrumbs-container__inner">
+                    <h1 class="page-title">Twój profil</h1>
+                    <ul class="breadcrumbs">
+                        <li><a href="#">Strona główna</a></li>
+                        <li><a href="#" class="breadcrumbs__current-page is-disabled">Twój profil</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <main class="main">
+            <div class="page-content gray-bg">
+                <div class="container">
+                    <div class="section profile">
+                        <header class="section__header">
+                            <h5 class="section__title">Witaj, Jan kowalski</h5>
+                            <a href="#" class="btn btn--primary"><span>Wyloguj się</span><i class="ico ico-arrow-right"></i></a>
+                        </header>
+                        <div class="profile__inner">
+                            <form action="" class="form">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="profile__avatar">
+                                            <div class="profile__img">
+                                                <img src="assets/img/default-img.png" alt="">
+                                            </div>
+                                            <div class="profile__avatar-info">
+                                                <span class="profile__avatar-info-title">Twój avatar</span>
+                                                <span class="profile__avatar-info-item">Akceptowalne formaty <strong>.jpg, .png.</strong></span>
+                                                <span class="profile__avatar-info-item">Rozmiar do <strong>5mb.</strong></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 col-lg-offset-1">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Twój e-mail</label>
+                                                    <div class="field-group is-disabled">
+                                                        <input type="email" name="email" placeholder="example@email.com" id="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Twoje imię</label>
+                                                    <div class="field-group">
+                                                        <input type="text" name="name" placeholder="Jan Kowalski" id="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Twoje hasło</label>
+                                                    <div class="field-group">
+                                                        <input type="password" name="password" placeholder="********" id="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Powtórz hasło</label>
+                                                    <div class="field-group">
+                                                        <input type="password" name="confirm" placeholder="********" id="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="form__footer">
+                                            <div class="field-group">
+                                                <div class="checkbox">
+                                                    <div class="checkbox__inner">
+                                                        <input type="checkbox" name="chx" id="chx-1" checked />
+                                                        <label for="chx-1" class="checkbox__label">Chcę otrzymywać newsletter</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn"><i class="ico ico-plus"></i><span>Zapisz zmiany</span></button>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <header class="section__header">
+                            <h5 class="section__title">Twoje ulubione wpisy</h5>
+                            <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
+                        </header>
+                        <div class="row">
+                            <div class="col-lg-4 col-xs-6 col-xxs-12">
+                                <article class="post post--violet">
+                                    <a href="#" class="post__img">
+                                        <img src="assets/img/post-example.jpg" alt="">
+                                    </a>
+                                    <div class="post__text">
+                                        <header>
+                                            <span class="post__category">Twoje hobby</span>
+                                            <a href="#" class="post__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, reprehenderit adipisci excepturi nulla sed ad? Nam dignissimos saepe laborum blanditiis.</a>
+                                        </header>
+                                        <footer class="post__footer">
+                                            <div class="post__date">
+                                                <span>Maj 30, 2017</span>
+                                                <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
+                                            </div>
+                                            <a href="#" class="ico ico-star-fill"></a>
+                                        </footer>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-lg-4 col-xs-6 col-xxs-12">
+                                <article class="post post--green">
+                                    <a href="#" class="post__img">
+                                        <img src="assets/img/post-example.jpg" alt="">
+                                    </a>
+                                    <div class="post__text">
+                                        <header>
+                                            <span class="post__category">Dietetyka</span>
+                                            <a href="#" class="post__title">Cras quis leo porttito lorem ipsum dolor</a>
+                                        </header>
+                                        <footer class="post__footer">
+                                            <div class="post__date">
+                                                <span>Maj 30, 2017</span>
+                                                <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
+                                            </div>
+                                            <a href="#" class="ico ico-star-fill"></a>
+                                        </footer>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-lg-4 col-xs-6 col-xxs-12">
+                                <article class="post post--blue">
+                                    <a href="#" class="post__img">
+                                        <img src="assets/img/post-example.jpg" alt="">
+                                    </a>
+                                    <div class="post__text">
+                                        <header>
+                                            <span class="post__category">Kompendium wiedzy</span>
+                                            <a href="#" class="post__title">Cras quis leo porttito</a>
+                                        </header>
+                                        <footer class="post__footer">
+                                            <div class="post__date">
+                                                <span>Maj 30, 2017</span>
+                                                <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
+                                            </div>
+                                            <a href="#" class="ico ico-star-fill"></a>
+                                        </footer>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <header class="section__header">
+                            <h5 class="section__title">Twoje ulubione wydarzenia</h5>
+                            <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
+                        </header>
+                        <div class="row">
+                            <div class="col-lg-4 col-xs-6 col-xxs-12">
+                                <article class="post post--violet">
+                                    <a href="#" class="post__img">
+                                        <img src="assets/img/post-example.jpg" alt="">
+                                    </a>
+                                    <div class="post__text">
+                                        <header>
+                                            <a href="#" class="post__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, reprehenderit adipisci excepturi nulla sed ad? Nam dignissimos saepe laborum blanditiis.</a>
+                                        </header>
+                                        <footer class="post__footer">
+                                            <div class="post__date">
+                                                <span>Maj 30, 2017</span>
+                                                <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
+                                            </div>
+                                            <a href="#" class="ico ico-star-fill"></a>
+                                        </footer>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-lg-4 col-xs-6 col-xxs-12">
+                                <article class="post post--green">
+                                    <a href="#" class="post__img">
+                                        <img src="assets/img/post-example.jpg" alt="">
+                                    </a>
+                                    <div class="post__text">
+                                        <header>
+                                            <a href="#" class="post__title">Cras quis leo porttito lorem ipsum dolor</a>
+                                        </header>
+                                        <footer class="post__footer">
+                                            <div class="post__date">
+                                                <span>Maj 30, 2017</span>
+                                                <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
+                                            </div>
+                                            <a href="#" class="ico ico-star-fill"></a>
+                                        </footer>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-lg-4 col-xs-6 col-xxs-12">
+                                <article class="post post--blue">
+                                    <a href="#" class="post__img">
+                                        <img src="assets/img/post-example.jpg" alt="">
+                                    </a>
+                                    <div class="post__text">
+                                        <header>
+                                            <a href="#" class="post__title">Cras quis leo porttito</a>
+                                        </header>
+                                        <footer class="post__footer">
+                                            <div class="post__date">
+                                                <span>Maj 30, 2017</span>
+                                                <a href="#" class="btn btn--primary"><span>Zobacz więcej</span><i class="ico ico-arrow-right"></i></a>
+                                            </div>
+                                            <a href="#" class="ico ico-star-fill"></a>
+                                        </footer>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span class="footer__title">Menu</span>
+                            <ul class="footer__list">
+                                <li><a href="#">Rozwój osobisty</a></li>
+                                <li><a href="#">Twoje hobby</a></li>
+                                <li><a href="#">Kompendium wiedzy</a></li>
+                                <li><a href="#">Dietetyka</a></li>
+                                <li><a href="#">Psychologia</a></li>
+                                <li><a href="#">Forum</a></li>
+                                <li><a href="#">Wydarzenia</a></li>
+                                <li><a href="#">Partner serwisu</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-8 col-md-offset-1">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <span class="footer__title">Newsletter</span>
+                                    <form action="" class="footer__newsletter">
+                                        <div class="form-group">
+                                            <div class="field-group">
+                                                <input type="email" name="" placeholder="example@email.com" />
+                                                <button type="submit" class="ico ico-arrow-right"></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-5 col-sm-offset-1">
+                                    <span class="footer__title">Dołącz do nas</span>
+                                    <ul class="footer__social-links">
+                                        <li><a href="#" class="footer__social-link footer__social-link--facebook"></a></li>
+                                        <li><a href="#" class="footer__social-link footer__social-link--youtube"></a></li>
+                                        <li><a href="#" class="footer__social-link footer__social-link--instagram"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer__desc">
+                                <span class="footer__title">Zdrowe życie</span>
+                                <p>Tekst pod seo - ogolny opis strony. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin odio et ornare congue. Suspendisse posuere, mi nec placerat porta, nibh nibh porta ex, at elementum tortor odio vel ipsum. Donec urna ante, sagittis ut est sit amet, laoreet tincidunt arcu. Fusce bibendum placerat</p>
+                                <div class="footer__partner">
+                                    <span>Partner serwisu:</span>
+                                    <a href="https://klinika.osrodek-oaza.pl/" target="_blank"><img src="assets/img/oaza-logo.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="container">
+                    <div class="footer__copyright-inner">
+                        <p class="footer__copy">2017 &copy; <span>Zdrowe życie</span>. Wszelkie prawa zastrzeżone. <a href="#">Regulamin</a></p>
+                        <p class="footer__create">Projekt i realizacja: <a href="https://www.grupa-tense.pl/" target="_blank">Grupa Tense</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/main.min.js"></script>
+    </body>
+</html>
